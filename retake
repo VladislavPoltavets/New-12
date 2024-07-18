@@ -1,0 +1,21 @@
+def add_contact(phone_book, name, contact_info):
+  phone_book[name] = contact_info
+def edit_contact(phone_book, name, new_contact_info):
+  if name in phone_book:
+    phone_book[name] = new_contact_info
+  else:
+    print(f"Контакт {name} не найден в справочнике.")
+def delete_contact(phone_book, name):
+  if name in phone_book:
+    del phone_book[name]
+  else:
+    print(f"Контакт {name} не найден в справочнике.")
+fone_book = {
+  "Иванов": "123-454",
+  "Москвин": "765-234",
+  "Гудин": "345-237"
+}
+add_contact(phone_book, "Новый контакт", "332-331")
+edit_contact(phone_book, "Иванов", "222-456")
+delet_contact(phone_book, "Гудин")
+print(phone_book)
